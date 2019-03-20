@@ -24,3 +24,5 @@ systemctl set-default multi-user.target
 
 gpg --recv-keys 1DCE2C057903C34D
 pacman-key --init
+pacman-key --recv-keys 1DCE2C057903C34D
+pacman-key --refresh-keys
