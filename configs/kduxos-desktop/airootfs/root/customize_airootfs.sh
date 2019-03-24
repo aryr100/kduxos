@@ -19,8 +19,8 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service NetworkManager.service wicd.service lxdm.service
-systemctl set-default multi-user.target
+systemctl enable pacman-init.service choose-mirror.service NetworkManager.service wicd.service lightdm.service
+systemctl set-default graphical.target
 
 gpg --recv-keys 1DCE2C057903C34D
 pacman-key --init
