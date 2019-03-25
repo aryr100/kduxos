@@ -11,15 +11,9 @@ usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
 
-if [ $(getent group nopasswdlogin) = false ]; then
-  groupadd -r nopasswdlogin
-fi
-if [ $(getent group autologin) = false ]; then
-  groupadd -r autologin
-fi
-if [ $(getent passwd kdux) = false ]; then
-  useradd kdux -g users -G wheel,autologin,nopasswdlogin -m -s /usr/bin/zsh
-fi
+groupadd -r nopasswdlogin
+groupadd -r autologin
+useradd kdux -g users -G wheel,autologin,nopasswdlogin -m -s /usr/bin/zsh
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
