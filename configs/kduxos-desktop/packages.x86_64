@@ -51,7 +51,7 @@ rsync
 sdparm
 sg3_utils
 smartmontools
-sudo
+kdux-sudo
 tcpdump
 testdisk
 usb_modeswitch
