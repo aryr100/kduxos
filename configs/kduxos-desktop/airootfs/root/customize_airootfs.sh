@@ -13,7 +13,7 @@ chmod 700 /root
 
 groupadd -r nopasswdlogin
 groupadd -r autologin
-useradd kdux -g users -G wheel,autologin,nopasswdlogin -m -s /usr/bin/zsh -p $(openssl passwd -1 kdux)
+useradd kdux -g users -G wheel,autologin,nopasswdlogin,video -m -s /usr/bin/zsh -p $(openssl passwd -1 kdux)
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
