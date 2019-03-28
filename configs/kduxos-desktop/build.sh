@@ -2,7 +2,7 @@
 
 set -e -u
 
-iso_name=kduxos
+iso_name=kduxos-desktop
 iso_label="KDUX_$(date +%Y%m)"
 iso_publisher="KduxOS <https://github.com/kduxos>"
 iso_application="KduxOS Live/Rescue CD"
