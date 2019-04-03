@@ -5,8 +5,8 @@ set -e -u
 iso_name=kduxos-desktop
 iso_label="KDUX_$(date +%Y%m)"
 iso_publisher="KduxOS <https://github.com/kduxos>"
-iso_application="KduxOS Live/Rescue CD"
-iso_version="0.1.1-prealpha"
+iso_application="KduxOS Desktop Live/Rescue CD"
+iso_version="0.1.2-prealpha"
 install_dir=arch
 work_dir=work
 out_dir=out
